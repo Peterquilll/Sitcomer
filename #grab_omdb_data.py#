@@ -1,7 +1,6 @@
 import requests
 
 import MySQLdb
-
 db = MySQLdb.connect(host="localhost", user="root", passwd="Gospeed69", db="sitcomer")
 cursor = db.cursor()
 

@@ -1,0 +1,22 @@
+import requests
+
+import MySQLdb
+
+from bs4 import BeautifulSoup
+
+def scrape():
+    season_range = (1, n + 1)
+    season = random.choice(season_range)
+    response = requests.get("https://www.imdb.com/title/tt0108778/episodes?season=" + str(season)  + "") 
+    html_soup = BeautifulSoup(response.text, 'html.parser')
+    images = html_soup.find_all('img', class_='zero-z-index')s
+    img = images[0]
+    img.attrs['src']`
+
+def main():
+    print(str(scrape(n)))
+
+
+if __name__ == '__main__':
+    main()
+    

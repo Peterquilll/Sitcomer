@@ -1,0 +1,6 @@
+import main
+
+
+def page():
+    text = "<img src='https://fontmeme.com/temporary/bcf6aa49049eacad15dc03cba898ca99.png' alt='Welcome to Sitcomer!'/> <link rel='stylesheet' href='{{ url_for('static', filename='css/main.css') }}'>"
+    return text
