@@ -11,7 +11,7 @@ def index():
     episode_data = get_episode(n)
     image = episode_data[-1]
     img_html = '<img height="210" width="320" src="%s" />' % (image,)
-    result = page() +img_html + str(episode_data[:-1])
+    result = page() + img_html + str(episode_data[:-1]) + '</body></html>'
     return result
 
 
