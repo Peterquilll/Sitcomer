@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, send_from_directory
 app = Flask(__name__)
 
 from episodes import get_episode
@@ -15,3 +15,14 @@ def index():
     return result
 
 
+@app.route("/vendor/<path:path>")
+def send_vendor(path):
+    return send_from_directory('vendor', path)
+
+@app.route("/css/<path:path>")
+def send_css(path):
+    return send_from_directory('css', path)
+
+@app.route("/img/<path:path>")
+def send_img(path):
+    return send_from_directory('img', path)
