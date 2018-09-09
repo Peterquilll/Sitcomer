@@ -271,7 +271,7 @@ form .row:first-child .floating-label-form-group{
 .footer{
     padding-top:5rem;
     padding-bottom:5rem;
-    background-color:#2c3e50;
+    background-color:#264d7e;
     color:#fff
 }
 .copyright{
@@ -333,4 +333,5 @@ a:active,a:focus,a:hover{
     color: #fff;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
+OB
 OB
