@@ -9,7 +9,6 @@ def index():
     n = 10
     episode_data = get_episode(n)
     image = episode_data[-1]
-    img_html = '<img height="210" width="320" src="%s" />' % (image,)
     season, episode, name = episode_data[:-1]
     return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode)
 

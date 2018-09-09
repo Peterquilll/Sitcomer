@@ -314,3 +314,23 @@ a:active,a:focus,a:hover{
     background-color:#1a252f;
     border-color:#1a252f
 }
+
+.button{
+    background-color:#264d7e;
+    color: white;
+    font-family: montserrat;
+    border: 3px solid #f08080;
+    border-radius: 12px;
+    font-size: 20px;
+    padding: 14px 40px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    display: inline-block;
+}
+.button:hover{
+    background-color:#264d7e;
+    color: #fff;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+OB
