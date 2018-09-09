@@ -8,9 +8,9 @@ from episodes import get_episode
 def index():
     n = 10
     episode_data = get_episode(n)
-    image = episode_data[-1]
-    season, episode, name = episode_data[:-1]
-    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode)
+    netflix_id = episode_data[-1]
+    season, episode, name, image = episode_data[:-1]
+    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
 
 @app.route("/css/<path:path>")
 def send_css(path):

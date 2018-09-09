@@ -4,16 +4,20 @@ db = MySQLdb.connect(host="localhost", user="root", passwd="Gospeed69", db="sitc
 r")
 cursor = db.cursor()
 
-def add_id(n):
-    query = "INSERT INTO episode (netlfix_id) VALUES (%s)"
-    cursor.execute(query, (str(n)))
-
 def main():
     n = 70273996
-    e = 238
+    e = 239
+    i = 1
     for x in range(1, e):
-        n +=1
-        add_id(n)
+        n += 1
+        my_list = str(n)
+        query = "UPDATE episode SET netflix_id=%s WHERE id=%s"
+        print(n)
+        cursor.execute(query, (my_list, i))
+        i += 1
+        print(i)
+    db.commit()
+
 
 
 if __name__ == '__main__':
