@@ -1,5 +1,0 @@
-
-
-FRIENDS_IMDB_IT = 'tt0108778'
-OMDB_API_KEY = 'b6762ffb'
-
