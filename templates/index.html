@@ -59,7 +59,9 @@
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
         <img class="img-fluid mb-5 d-block mx-auto" src="{{ value }}" alt="">
-        <h1 class="text-uppercase mb-0">{{ episode_name }} </h1>
+	<a href="https://www.netflix.com/watch/{{ netflix }}" target="_blank">
+          <h1 class="text-uppercase mb-0">{{ episode_name }} </h1>
+	</a>
         <hr class="star-light">
 	<h2 class="font-weight-light mb-0">Season {{ season }} | Episode {{ episode }}</h2>
 	<hr class="star-light">

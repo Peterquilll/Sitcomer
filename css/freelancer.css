@@ -276,12 +276,15 @@ form .row:first-child .floating-label-form-group{
 .copyright{
     background-color:#1a252f
 }
-a{
-    color:#18bc9c
+
+a {
+    color: white;
 }
-a:active,a:focus,a:hover{
-    color:#128f76
+
+a:active, a:focus, a:hover {
+    color: white;
 }
+
 .btn{
     border-width:2px
 }
