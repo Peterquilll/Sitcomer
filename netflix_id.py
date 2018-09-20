@@ -5,13 +5,16 @@ r")
 cursor = db.cursor()
 
 def main():
-    n = 70273996
-    e = 239
-    i = 1
-    for x in range(1, e):
+    show_name = input("name of show: ")
+    n = input("netlfix id - 1: ")
+    e = input("number of episodes to change + 1: ")
+    i = input("(which episode do you want to start at?(1 for default): ")
+    for x in range(1, int(e)):
+        n = int(n)
+        i = int(i)
         n += 1
         my_list = str(n)
-        query = "UPDATE episode SET netflix_id=%s WHERE id=%s"
+        query = "UPDATE "+ show_name + " SET netflix_id=%s WHERE id=%s"
         print(n)
         cursor.execute(query, (my_list, i))
         i += 1

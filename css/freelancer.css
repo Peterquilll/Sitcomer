@@ -30,7 +30,7 @@ hr.star-light{
 }
 hr.star-light:after{
     color:#fff;
-    background-color:#f08080
+    background-color:#221f1f
 }
 hr.star-dark{
     border-color:#2c3e50
@@ -112,7 +112,7 @@ section h2{
         transition:padding-top .3s,padding-bottom .3s
     }
     #mainNav .navbar-brand{
-        font-size:2em;
+        font-size:3em;
         -webkit-transition:font-size .3s;
         -moz-transition:font-size .3s;
         transition:font-size .3s
@@ -270,7 +270,7 @@ form .row:first-child .floating-label-form-group{
 .footer{
     padding-top:5rem;
     padding-bottom:5rem;
-    background-color:#264d7e;
+    background-color:#831010;
     color:#fff
 }
 .copyright{
@@ -289,10 +289,10 @@ a:active, a:focus, a:hover {
     border-width:2px
 }
 .bg-primary{
-    background-color:#f08080!important
+    background-color:#221f1f!important
 }
 .bg-secondary{
-    background-color:#264d7e!important
+    background-color:#831010!important
 }
 .text-primary{
     color:#18bc9c!important
@@ -318,20 +318,19 @@ a:active, a:focus, a:hover {
 }
 
 .button{
-    background-color:#264d7e;
+    background-color:#221f1f;
     color: white;
     font-family: montserrat;
-    border: 3px solid #f08080;
-    border-radius: 12px;
+    border-radius: 10px;
     font-size: 20px;
-    padding: 14px 40px;
+    padding: 14px 30px;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     cursor: pointer;
-    display: inline-block;
+
 }
 .button:hover{
-    background-color:#264d7e;
+    background-color:#007bff;
     color: #fff;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

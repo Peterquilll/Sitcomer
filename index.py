@@ -3,11 +3,12 @@ app = Flask(__name__)
 
 from episodes import get_episode
 
+from choice import choices
+
 
 @app.route("/")
 def index():
-    n = 10
-    episode_data = get_episode(n)
+    episode_data = get_episode(choices)
     netflix_id = episode_data[-1]
     season, episode, name, image = episode_data[:-1]
     return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
