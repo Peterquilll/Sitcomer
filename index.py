@@ -49,7 +49,7 @@ def arrested():
 @app.route("/random")
 def random ():
     import random
-    i = random.randrange(0,4)
+    i = random.randrange(0,5)
     episode_data = get_episode(i, shows)
     netflix_id = episode_data[-1]
     season, episode, name, image = episode_data[:-1]
