@@ -4,8 +4,10 @@ import MySQLdb
 
 from bs4 import BeautifulSoup
 
-db = MySQLdb.connect(host="localhost", user="root", \
-passwd="Gospeed69", db="sitcomer")
+from config import HOST, USER, PASSWD, DB, shows
+
+
+db = MySQLdb.connect(host=HOST, user=USER, passwd=PASSWD, db=DB)
 cursor = db.cursor()
  
 def scrape(n, imdb_id, show_name):

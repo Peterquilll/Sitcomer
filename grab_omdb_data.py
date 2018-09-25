@@ -2,7 +2,10 @@ import requests
 
 import MySQLdb
 
-db = MySQLdb.connect(host="localhost", user="root", passwd="Gospeed69", db="sitcomer")
+from config import HOST, USER, PASSWD, DB, shows
+
+
+db = MySQLdb.connect(host=HOST, user=USER, passwd=PASSWD, db=DB)
 cursor = db.cursor()
 
 

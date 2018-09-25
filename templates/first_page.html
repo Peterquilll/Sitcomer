@@ -33,7 +33,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-	<a class="navbar-brand js-scroll-trigger" href={{ url_for('choose_show') }}>Sitcomer</a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Sitcomer</a>
         <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -43,7 +43,7 @@
             <li class="nav-item mx-0 mx-lg-1">
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-	      <a class="btn btn-default" onClick="window.location.reload()"  >Random Episode</a>
+	      <a href={{ url_for('random') }} class="btn btn-default">Random Everything</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"></a>
@@ -56,16 +56,25 @@
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-	<a href="https://www.netflix.com/watch/{{ netflix }}" target="_blank">
+	<a href="https://www.netflix.com/watch/{{ netflix }}">
           <img class="img-fluid mb-5 d-block mx-auto" src="{{ value }}" alt="">
 	</a>
-	<a href="https://www.netflix.com/watch/{{ netflix }}" target="_blank">
-          <h1 class="text-uppercase mb-0">{{ episode_name }} </h1>
-	</a>
-        <hr class="star-light">
-	<h2 class="font-weight-light mb-0">Season {{ season }} | Episode {{ episode }}</h2>
+        <h1 class="text-uppercase mb-0">Choose a Netflix Show</h1>
+	<hr class="star-light">
+	  <a href={{ url_for('parks') }}>
+	  <h2 class="font-weight-light mb-0">Parks and Recreations</h2>
+	  </a>
+	  <a href={{ url_for('office') }}>
+          <h2 class="font-weight-light mb-0">The Office</h2>
+          </a>
+	  <a href={{ url_for('bad') }}>
+          <h2 class="font-weight-light mb-0">Breaking Bad</h2>
+          </a>
+	  <a href={{ url_for('friends') }}>
+          <h2 class="font-weight-light mb-0">Friends</h2>
+          </a>
       </div>
-    </header>
+</header>
 
      <!-- Footer -->
     <footer class="footer text-center">
@@ -75,8 +84,8 @@
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">What is Sitcomer?</h4>
-	    <p class="lead mb-0">Looking for a random Friends episode to watch on Netlfix?</p><br>
-	    <p class="lead mb-0">Click the 'New Episode' button and binge on!</p>
+	    <p class="lead mb-0">Looking for a random TV episode to watch on Netlfix?</p><br>
+	    <p class="lead mb-0">Choose a television show and we will do the rest!</p>
           </div>
     </footer>
 </body>
