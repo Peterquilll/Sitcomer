@@ -11,30 +11,37 @@ from episodes import get_episode
 def choose_show ():
     return render_template('first_page.html', )
 
-@app.route("/parks")
-def parks():
-    episode_data = get_episode(0, shows)
-    netflix_id = episode_data[-1]
-    season, episode, name, image = episode_data[:-1]
-    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
-
-@app.route("/the_office")
-def office():
-    episode_data = get_episode(1, shows)
-    netflix_id = episode_data[-1]
-    season, episode, name, image = episode_data[:-1]
-    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
-
 @app.route("/breaking_bad")
 def bad():
-    episode_data = get_episode(2, shows)
+    episode_data = get_episode(0, shows)
     netflix_id = episode_data[-1]
     season, episode, name, image = episode_data[:-1]
     return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
 
 @app.route("/friends")
 def friends():
+    episode_data = get_episode(1, shows)
+    netflix_id = episode_data[-1]
+    season, episode, name, image = episode_data[:-1]
+    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
+
+@app.route("/parks_and_rec")
+def parks():
+    episode_data = get_episode(2, shows)
+    netflix_id = episode_data[-1]
+    season, episode, name, image = episode_data[:-1]
+    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
+
+@app.route("/the_office")
+def office():
     episode_data = get_episode(3, shows)
+    netflix_id = episode_data[-1]
+    season, episode, name, image = episode_data[:-1]
+    return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
+
+@app.route("/arrested_development")
+def arrested():
+    episode_data = get_episode(4, shows)
     netflix_id = episode_data[-1]
     season, episode, name, image = episode_data[:-1]
     return render_template('index.html', value=image, data_from_directory=episode_data, episode_name=name, season=season, episode=episode, netflix=netflix_id)
