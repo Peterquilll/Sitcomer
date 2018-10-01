@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-
+  
   <head>
-
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+    
     <title>Sitcomer: Binge on </title>
-
+    
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom fonts for this template -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    
     <!-- Plugin CSS -->
     <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
+    
     <!-- Custom styles for this template -->
     <link rel="stylesheet" type="text/css" href="css/freelancer.css">
-
-
-
+    
+    
+    
   </head>
-
+  
   <body id="page-top">
-
-    <!-- Navigation -->
+    
     <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
       <div class="container">
-	<a class="navbar-brand js-scroll-trigger" href={{ url_for('choose_show') }}>Sitcomer</a>
-        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand js-scroll-trigger" href={{ url_for('choose_show') }}>Sitcomer</a>
+        <button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResp\
+																			   onsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
         </button>
@@ -43,7 +42,7 @@
             <li class="nav-item mx-0 mx-lg-1">
             </li>
             <li class="nav-item mx-0 mx-lg-1">
-	      <a class="btn btn-default" onClick="window.location.reload()"  >Random Episode</a>
+              <a href={{ url_for('random') }} class="btn btn-default">Random Everything</a>
             </li>
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"></a>
@@ -52,25 +51,28 @@
         </div>
       </div>
     </nav>
-
+    
     <!-- Header -->
     <header class="masthead bg-primary text-white text-center">
       <div class="container">
-	<a href="https://www.netflix.com/watch/{{ netflix }}" target="_blank">
-          <img class="img-fluid mb-5 d-block mx-auto" src="http://image.tmdb.org/t/p/w300/{{ value }}" alt="">
-	</a>
-	<a href="https://www.netflix.com/watch/{{ netflix }}" target="_blank">
-          <h1 class="text-uppercase mb-0">{{ episode_name }} </h1>
-	</a>
-	<p class="lead mb-0">{{  description  }}</p>
+        <a href="https://www.netflix.com/watch/{{ netflix }}">
+          <img class="img-fluid mb-5 d-block mx-auto" src="{{ value }}" alt="">
+        </a>
+        <h1 class="text-uppercase mb-0">Choose a Classic Sitcom</h1>
         <hr class="star-light">
-	<h2 class="font-weight-light mb-0">Season {{ season }} | Episode {{ episode }}</h2>
+        <a href={{ url_for('cheers') }}>
+          <h2 class="font-weight-light mb-0">Cheers</h2>
+        </a>
+	 <a href={{ url_for('friends') }}>
+          <h2 class="font-weight-light mb-0">Friends</h2>
+        </a>
+
       </div>
     </header>
-
-     <!-- Footer -->
+    
+    <!-- Footer -->
     <footer class="footer text-center">
-      <div class="container">
+   <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">What is Sitcomer?</h4>
@@ -80,29 +82,28 @@
           </div>
           <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">What do I do with this episode?</h4>
-            <p class="lead mb-0">Click on the picture or title and you will be taken straight to that episode!</p\><br>
+            <p class="lead mb-0">Click on the picture or title and you will be taken straight to that episode!</p><br>
             <p class="lead mb-0">If you want a differnt episode, choose "Random Episode from the menu bar or at the top of the screen</p><br>
             <p class="lead mb-0"> Random everything will give you a random show and episode!</p>
           </div>
-    </footer>
+ </footer>
   </body>
   
+  
+  
+  
+  
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
 
-
-
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/freelancer.min.js"></script>
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>

@@ -30,6 +30,7 @@ def main():
     n = input("number of seasons:")
     for x in range(1, int(n) + 1):
         scrape(x, imdb_id, show_name)
+        shows.append(show_name, str(n)
 
 if __name__ == '__main__':
     main()

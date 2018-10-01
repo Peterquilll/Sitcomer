@@ -53,30 +53,43 @@
       </div>
     </nav>
 
-    <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
-      <div class="container">
+<header class="masthead bg-primary text-white text-center">
+  <div class="container-fluid">
 	<a href="https://www.netflix.com/watch/{{ netflix }}">
           <img class="img-fluid mb-5 d-block mx-auto" src="{{ value }}" alt="">
 	</a>
-        <h1 class="text-uppercase mb-0">Choose a Netflix Show</h1>
+        <h1 class="text-uppercase mb-0">Choose a TV Category</h1>
 	<hr class="star-light">
-	 <a href={{ url_for('arrested') }}>
-          <h2 class="font-weight-light mb-0">Arrested Development</h2>
-          </a>
-	  <a href={{ url_for('bad') }}>
-	  <h2 class="font-weight-light mb-0">Breaking Bad</h2>
-	  </a>
-	  <a href={{ url_for('friends') }}>
-          <h2 class="font-weight-light mb-0">Friends</h2>
-          </a>
-	  <a href={{ url_for('parks') }}>
-          <h2 class="font-weight-light mb-0">Parks and Recreations</h2>
-          </a>
-	  <a href={{ url_for('office') }}>
-          <h2 class="font-weight-light mb-0">The Office</h2>
-          </a>
-      </div>
+	<div class="rows">
+	  <div class="btn-froup-vertical" role="toolbar" aria-label="Toolbar with button groups">
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+	      <a class="btn btn-outline-secondary" href={{ url_for('animated') }} role="button">Animated</a>
+	    </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('classic') }} role="button">Classic Sitcom</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('comedy') }} role="button">Comedy</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('drama') }} role="button">Drama</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('originals') }} role="button">Netflix Originals</a>
+            </div>
+	    
+	  </div>
+	</div>
+  </div>
+  
+
+
+	
+
+    
+
+	      
+	 
 </header>
 
      <!-- Footer -->
@@ -84,11 +97,16 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">What is Sitcomer?</h4>
 	    <p class="lead mb-0">Looking for a random TV episode to watch on Netlfix?</p><br>
-	    <p class="lead mb-0">Choose a television show and we will do the rest!</p>
+	    <p class="lead mb-0">Choose a television show from the categories and we will do the rest</p><br>
+	     <p class="lead mb-0"> Click on the Sitcomer title to take you back to the main page at any time.</p>
+          </div>
+	  <div class="col-md-4 mb-5 mb-lg-0">
+	    <h4 class="text-uppercase mb-4">What do I do with this episode?</h4>
+	    <p class="lead mb-0">Click on the picture or title and you will be taken straight to that episode!</p><br>
+            <p class="lead mb-0">If you want a differnt episode, choose "Random Episode from the menu bar or at the top of the screen</p><br>
+	    <p class="lead mb-0"> Random everything will give you a random show and episode!</p>
           </div>
     </footer>
 </body>
