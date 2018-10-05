@@ -40,11 +40,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-0 mx-lg-1">
-            </li>
-            <li class="nav-item mx-0 mx-lg-1">
+	    <li class="nav-item mx-0 mx-lg-1">
 	      <a href={{ url_for('random') }} class="btn btn-default">Random Everything</a>
             </li>
+	    <li class="nav-item mx-0 mx-lg-1">
+
+            </li>
+
             <li class="nav-item mx-0 mx-lg-1">
               <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"></a>
             </li>
@@ -66,16 +68,32 @@
 	      <a class="btn btn-outline-secondary" href={{ url_for('animated') }} role="button">Animated</a>
 	    </div>
 	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('anime') }} role="button">Anime</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
               <a class="btn btn-outline-secondary" href={{ url_for('classic') }} role="button">Classic Sitcom</a>
             </div>
 	    <div class="btn-group mr-2" role="group" aria-label="First group">
               <a class="btn btn-outline-secondary" href={{ url_for('comedy') }} role="button">Comedy</a>
             </div>
 	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('crime') }} role="button">Crime Drama</a>
+            </div>
+	     <hr class="br">
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('dc') }} role="button">D.C Television</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
               <a class="btn btn-outline-secondary" href={{ url_for('drama') }} role="button">Drama</a>
             </div>
 	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('marvel') }} role="button">Marvel Television</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
               <a class="btn btn-outline-secondary" href={{ url_for('originals') }} role="button">Netflix Originals</a>
+            </div>
+	    <div class="btn-group mr-2" role="group" aria-label="First group">
+              <a class="btn btn-outline-secondary" href={{ url_for('romcom') }} role="button">Romcom</a>
             </div>
 	    
 	  </div>
@@ -97,17 +115,24 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">What is Sitcomer?</h4>
+            <h4 class="text-uppercase mb-3">What is Sitcomer?</h4></br>
 	    <p class="lead mb-0">Looking for a random TV episode to watch on Netlfix?</p><br>
-	    <p class="lead mb-0">Choose a television show from the categories and we will do the rest</p><br>
+	    <p class="lead mb-0">Choose a television show from the categories and we will randomize that show!</p><br>
 	     <p class="lead mb-0"> Click on the Sitcomer title to take you back to the main page at any time.</p>
           </div>
 	  <div class="col-md-4 mb-5 mb-lg-0">
-	    <h4 class="text-uppercase mb-4">What do I do with this episode?</h4>
-	    <p class="lead mb-0">Click on the picture or title and you will be taken straight to that episode!</p><br>
-            <p class="lead mb-0">If you want a differnt episode, choose "Random Episode from the menu bar or at the top of the screen</p><br>
+	    <h4 class="text-uppercase mb-3">What do I do with this episode?</h4>
+	    <p class="lead mb-0">Click on the picture or title and you will be taken straight to that episode.</p><br>
+            <p class="lead mb-0">If you want a different episode, choose "Random Episode from the menu bar or at the top of the screen</p><br>
 	    <p class="lead mb-0"> Random everything will give you a random show and episode!</p>
           </div>
+	   <div class="col-md-4 mb-5 mb-lg-0">
+            <h4 class="text-uppercase mb-3">Questions or comments?</h4>
+            <p class="lead mb-0">Be sure to shoot an email with any comments, concerns, recomendations, or questions at:</p></br>
+	    <p class="lead mb-0">support@sitcomer.com</p>
+	   </div>
+	   
+
     </footer>
 </body>
 

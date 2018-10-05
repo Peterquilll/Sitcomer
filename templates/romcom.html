@@ -59,14 +59,17 @@
 	<a href="https://www.netflix.com/watch/{{ netflix }}">
 	  <img class="img-fluid mb-5 d-block mx-auto" src="{{ value }}" alt="">
 	</a>
-	<h1 class="text-uppercase mb-0">Choose an Animated Show</h1>
+	<h1 class="text-uppercase mb-0">Choose a Romcom</h1>
 	<hr class="star-light">
-	<a href={{ url_for('the_clone_wars') }}>
-	  <h2 class="font-weight mb-0">Star Wars: The Clone Wars</h2>
-	</a>
-	 <a href={{ url_for('voltron') }}>
-          <h2 class="font-weight mb-0">Voltron: Legendary Defender</h2>
+	 <a href = {{ url_for('ex') }}>
+          <h2 class="font-weight mb-0">Crazy Ex-Girlfriend</h2>
          </a>
+	  <a href = {{ url_for('jane') }}>
+          <h2 class="font-weight mb-0">Jane The virgin</h2>
+          </a>
+	   <a href = {{ url_for('love') }}>
+          <h2 class="font-weight mb-0">Love</h2>
+           </a>
       </div>
     </header>
     

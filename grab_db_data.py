@@ -8,14 +8,21 @@ from config import HOST, USER, PASSWD, DB
 db = MySQLdb.connect(host=HOST, user=USER, passwd=PASSWD, db=DB)
 cursor = db.cursor()
 
-def table_creator ():
-    name = input("Name of table(use _ for spaces): ")
+def table_creator (name):
+    name = name
     query = "CREATE TABLE " + name + "( id INT NOT NULL AUTO_INCREMENT, season_number int, episode_numb\
 er int, episode_name VARCHAR(200), episode_pic VARCHAR(200), netflix_id VARCHAR(200), show_description \
 VARCHAR(2000), PRIMARY KEY (id) );"
     cursor.execute(query)
     db.commit()
 
+def table_deleter(name):
+    name = name.replace(" ", "_")
+    query = "DROP TABLE IF EXISTS " + name + ";"
+    cursor.execute(query)
+    db.commit()
+    return name
+    
 def grab_db_show_id(show_title):
     db_id = requests.get("https://api.themoviedb.org/3/search/tv?api_key=dbaf6686a7c9d4d26e54ec02c635c530&language=en-US&query=" + show_title)
     id_query = db_id.json()
@@ -42,7 +49,7 @@ def grab_episodes(show_title, new_id, seasons):
     db.commit()
     
 def update_show_db(show_title, seasons):
-    query = ("INSERT INTO `show` (name_of_show, number_of_seasons) VALUES ('" + show_title.replace(" ", "_")  + "' ,"+ str(seasons) + ")")
+    query = ("INSERT INTO shows (name_of_show, number_of_seasons) VALUES ('" + show_title.replace(" ", "_")  + "' ,"+ str(seasons) + ")")
     cursor.execute(query)
     db.commit()
 
@@ -51,13 +58,13 @@ def update_show_db(show_title, seasons):
 
 def main():
     show_title = input("Name of the show(Please use spaces): ")
+    db_name = table_deleter(show_title)
     new_id = grab_db_show_id(show_title)
     seasons = grab_show_season(new_id)
-    table_creator()
-    update_show_db(show_title, seasons)
+    table_creator(db_name) 
     for x in range(1, seasons + 1):
-        grab_episodes(show_title, new_id, x)
-
+       grab_episodes(show_title, new_id, x)
+    update_show_db(show_title, seasons)
 
         
 if __name__ == '__main__':

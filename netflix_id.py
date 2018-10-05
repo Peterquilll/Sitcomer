@@ -1,6 +1,6 @@
 import MySQLdb
 
-from config import HOST, USER, PASSWD, DB, shows
+from config import HOST, USER, PASSWD, DB
 
 
 db = MySQLdb.connect(host=HOST, user=USER, passwd=PASSWD, db=DB)
