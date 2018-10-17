@@ -1,60 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-  <head>
+{% block content %}
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Sitcomer: Binge on </title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom fonts for this template -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
-
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" type="text/css" href="css/freelancer.css">
-
-
-
-  </head>
-
-  <body id="page-top">
-
-
-    <nav class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase" id="mainNav">
-      <div class="container">
-	<a class="navbar-brand js-scroll-trigger" href={{ url_for('choose_show') }}>Sitcomer</a>
-	<button class="navbar-toggler navbar-toggler-right text-uppercase bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-	  Menu
-	  <i class="fa fa-bars"></i>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-	  <ul class="navbar-nav ml-auto">
-	    <li class="nav-item mx-0 mx-lg-1">
-	    </li>
-	    <li class="nav-item mx-0 mx-lg-1">
-	      <a href={{ url_for('random') }} class="btn btn-default">Random Everything</a>
-	    </li>
-	    <li class="nav-item mx-0 mx-lg-1">
-	      <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact"></a>
-	    </li>
-	  </ul>
-	</div>
-      </div>
-    </nav>
-    
-    <!-- Header -->
-    <header class="masthead bg-primary text-white text-center">
       <div class="container">
 	<a href="https://www.netflix.com/watch/{{ netflix }}">
 	  <img class="img-fluid mb-5 d-block mx-auto" src="{{ value }}" alt="">
@@ -72,47 +19,6 @@
           <h2 class="font-weight mb-0">One Punch</h2>
         </a>
       </div>
-    </header>
-    
-    <!-- Footer -->
-    <footer class="footer text-center">
-   <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">What is Sitcomer?</h4>
-            <p class="lead mb-0">Looking for a random TV episode to watch on Netlfix?</p><br>
-            <p class="lead mb-0">Choose a television show from the categories and we will do the rest</p><br>
-            <p class="lead mb-0"> Click on the Sitcomer title to take you back to the main page at any time.</p>
-          </div>
-          <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">What do I do with this episode?</h4>
-            <p class="lead mb-0">Click on the picture or title and you will be taken straight to that episode!</p><br>
-            <p class="lead mb-0">If you want a differnt episode, choose "Random Episode from the menu bar or at the top of the screen</p><br>
-            <p class="lead mb-0"> Random everything will give you a random show and episode!</p>
-          </div>
-	  <div class="col-md-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-3">Questions or comments?</h4>
-            <p class="lead mb-0">Be sure to shoot an email with any comments, c\
-oncerns, recomendations, or questions at:</p></br>
-            <p class="lead mb-0">support@sitcomer.com</p>
-           </div>
 
- </footer>
-  </body>
-  
-  
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-  
-  <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-  
-  <!-- Custom scripts for this template -->
-  <script src="js/freelancer.min.js"></script>
-  
+
+  {% endblock}
