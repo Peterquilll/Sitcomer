@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
+<div class="container screenshot">
   <a href="https://www.netflix.com/watch/{{ netflix }}" target="_blank">
     <img class="img-fluid mb-5 d-block mx-auto" src="http://image.tmdb.org/t/p/w300/{{ value }}" alt="">
   </a>
@@ -11,4 +11,4 @@
   <hr class="star-light">
   <h2 class="font-weight-light mb-0">Season {{ season }} | Episode {{ episode }}</h2>
 </div>
-{% endblock %}  
+{% endblock %}

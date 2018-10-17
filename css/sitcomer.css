@@ -13,3 +13,7 @@ header.masthead {
       padding-top: calc(8rem);
   }
 }
+
+.screenshot {
+  padding-top: calc(2rem);
+}
