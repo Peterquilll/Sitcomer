@@ -1,0 +1,15 @@
+header.masthead {
+    padding-top:calc(7rem);
+}
+
+@media (min-width:400px) {
+    header.masthead{
+        padding-top: calc(5rem);
+    }
+}
+
+@media (min-width:992px){
+  header.masthead{
+      padding-top: calc(8rem);
+  }
+}
