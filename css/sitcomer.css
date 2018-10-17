@@ -1,0 +1,17 @@
+header.masthead {
+    padding-top:calc(5rem);
+    padding-bottom:6rem
+}
+
+@media (min-width:992px) {
+    header.masthead{
+        padding-top: calc(5rem);
+        padding-bottom:6rem;
+    }
+    header.masthead h1{
+        line-height:4rem
+    }
+    header.masthead h2{
+        font-size:1.75em
+    }
+}
