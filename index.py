@@ -7,7 +7,7 @@ from get_episode import get_episode, get_length
 # Main page
 @app.route("/")
 def choose_show ():
-    return render_template('first_page.html', )
+    return render_template('first_page.html')
 
 #pages
 @app.route("/animated")
@@ -902,4 +902,3 @@ def send_vendor(path):
 
 if __name__ == '__main__':
    app.run(debug = True)
-
