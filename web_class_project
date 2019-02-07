@@ -1,0 +1,13 @@
+<html> </html> : This tag tells the browser that this document is an html Document and contains all the html code.
+
+<head> </head> : This tag is a container for metadata (stuff that doesnt necessarily show up on the page)
+
+<title> </title> : This tag gives the website a title that can be viewed on the tab space.
+
+<body> </body> : This tag contains the content that will be directly visable on the page.
+
+<br> : This tag give the page a line break
+
+<center> </center>: All content in this tag will be centered relative to location on the page.
+
+<h1> </h1> : This tag will contain the first header on your page.(Used as the main title in this case.)
