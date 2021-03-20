@@ -17,7 +17,7 @@ ipdb==0.11
 ipython==5.7.0
 ipython-genutils==0.2.0
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 kitchen==1.2.5
 MarkupSafe==1.0
 more-itertools==4.3.0
